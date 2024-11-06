@@ -21,11 +21,7 @@ document.body.appendChild(nuevoParrafo);
 boton.addEventListener("click", () => {
     if (parrafo.style.backgroundColor === "red") {
         parrafo.style.backgroundColor = "green";
-    }else if (parrafo.){
-
-    }
-    
-    else{
+    }else{
         parrafo.style.backgroundColor = "red";
     }
 });
