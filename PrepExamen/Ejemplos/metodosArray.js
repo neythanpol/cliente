@@ -55,3 +55,8 @@ edad >= 18 ? 'Mayor de edad' : 'Menor de edad';
 const arr1 = [1, 2];
 const arr2 = [3, 4];
 const combinado = [...arr1, ...arr2]; // Devuelve [1, 2, 3, 4]
+
+// Array multi a unidimensional
+
+const arrMulti = [[1, 2], [3, 4], [5, 6]];
+arrMulti.flat(); // Devuelve [1, 2, 3, 4, 5, 6]
