@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse; 
+        }
         th {
             cursor: pointer;
+            background-color: aquamarine;
+            user-select: none;
         }
     </style>
 </head>
 <body>
     <table>
         <thead>
-            <th id="nombre-tabla">Nombre</th>
-            <th id="apellidos-tabla">Apellidos</th>
-            <th id="nacimiento-tabla">Año Nacimiento</th>
-            <th id="sueldo-tabla">Sueldo</th>
+            <th onclick="ordenaNombre()" id="nombre-tabla">Nombre</th>
+            <th onclick="ordenaApellido()" id="apellidos-tabla">Apellidos</th>
+            <th onclick="ordenaEdad()" id="nacimiento-tabla">Nacimiento</th>
+            <th onclick="ordenaSueldo()" id="sueldo-tabla">Sueldo</th>
         </thead>
         <tbody id="lista-empleados">
 
