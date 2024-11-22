@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
     <title>Document</title>
     <style>
         table, th, td{
@@ -17,6 +18,26 @@
     </style>
 </head>
 <body>
+    <form action="get">
+        <div class="formulario">
+            <div class="formulario-fila">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="apellido">Apellidos</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+            <div>
+                <label for="nacimiento">Nacimiento</label>
+                <input type="number" name="nacimiento" id="nacimiento" placeholder="1999">
+            </div>
+            <div>
+                <label for="sueldo">Sueldo</label>
+                <input type="text" name="sueldo" id="sueldo">
+            </div>
+        </div>
+    </form>
     <table>
         <thead>
             <th onclick="ordenaNombre()" id="nombre-tabla">Nombre</th>

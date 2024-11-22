@@ -20,6 +20,27 @@ class Empleado{
                     <td>${this.#sueldo}</td></tr>`;
     }
 
+    render() {
+        let fila = document.createElement("tr");
+
+        let tdNombre = document.createElement("td");
+        let tdApellido = document.createElement("td");
+        let tdNacimiento = document.createElement("td");
+        let tdSueldo = document.createElement("td");
+
+        tdNombre.textContent = this.#nombre;
+        tdApellido.textContent = this.#apellido;
+        tdNacimiento.textContent = this.#nacimiento;
+        tdSueldo.textContent = this.#sueldo;
+
+        fila.appendChild(tdNombre);
+        fila.appendChild(tdApellido);
+        fila.appendChild(tdNacimiento);
+        fila.appendChild(tdSueldo);
+
+        return fila;
+    }
+
     getNombre() {
         return this.#nombre;
     } 
@@ -44,12 +65,33 @@ let empleados = [
     new Empleado("Eulalio", "Fernandez", 1999, 54000),
 ];
 
+let  document.getElementById("nacimiento");
+
 let tabla = document.getElementById("lista-empleados");
 
 empleados.forEach(empleado => {
-        tabla.innerHTML += empleado;
+        // tabla.innerHTML += empleado;
+        let fila = empleado.render();
+        tabla.appendChild(fila);
     }
 );
+
+let boton = document.getElementById("formulario-enviar");
+boton.addEventListener('click', evento => {
+    evento.preventDefault();
+
+    let nombre = document.getElementById('nombre').value
+    let apellido = document.getElementById('apellido').value
+    let nacimiento = document.getElementById('nacimiento').value
+    let sueldo = document.getElementById('sueldo').value
+
+    let empleado = new Empleado(nombre, apellido, nacimiento, sueldo)
+    empleados.push(empleado)
+
+    let tabla = document.getElementById('lista-empleados')
+    let fila = empleado.render()
+    tabla.appendChild(fila)
+});
 
 let ascendenteNombre = true;
 
