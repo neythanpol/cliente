@@ -1,0 +1,103 @@
+/* Natan Blanco Rodríguez*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 248, 238);
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 60vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px inset;
+    padding: 10px;
+    margin: 10px;
+}
+
+form input {
+    width: 50%;
+}
+
+#add-task {
+    padding: 3px;
+    cursor: pointer;
+}
+
+#add-task:hover {
+    background-color: black;
+    color: white;
+}
+
+#lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.completada {
+    text-decoration: line-through;
+}
+
+.contenedor-tareas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px;
+    width: 70vw;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.borrar-tarea {
+    cursor: pointer;
+}
+
+.borrar-tarea:hover {
+    background-color: rgb(180, 3, 3);
+}
+
+span {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}

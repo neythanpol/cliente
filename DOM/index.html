@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con Javascript</title>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con Javascript</h1>
+    <p id="parrafo1">Saludos!</p>
+    <p id="parrafo2">Otro párrafo</p>
+    <script>
+        let cabecero = document.getElementById("cabecero");
+        console.log(`valor cabecero: ${cabecero.innerHTML}`);
+        let parrafo = document.getElementById("parrafo1");
+        console.log(`valor párrafo: ${parrafo.innerHTML}`);
+        parrafo.innerHTML = "Hola Mundo!";
+        console.log('Saludos desde Javascript')
+
+        let parrafos = document.getElementsByTagName("p");
+        console.log(`No. párrafos: ${parrafos.length}`);
+        for (let i = 0; i < parrafos.length; i++) {
+            console.log(`${i} - ${parrafos[i].innerHTML}`);
+        }
+    </script>
+</body>
+</html>

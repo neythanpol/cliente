@@ -1,0 +1,115 @@
+1.- Manipulación del DOM:
+
+    document.getElementById(id): Selecciona un elemento por su ID.
+
+    document.querySelector(selector): Selecciona el primer elemento que coincida con un selector CSS.
+
+    document.createElement(tag): Crea un nuevo elemento HTML.
+
+    Ejemplo de uso de getElementById, createElement, textContent y appendChild
+    // Seleccionamos el elemento padre (div con id "contenedor")
+    const contenedor = document.getElementById('contenedor');
+
+    // Creamos un nuevo nodo de tipo párrafo
+    const nuevoParrafo = document.createElement('p');
+
+    // Añadimos texto al nuevo párrafo
+    nuevoParrafo.textContent = 'Este es un nuevo párrafo.';
+
+    // Usamos appendChild para añadir el párrafo al contenedor
+    contenedor.appendChild(nuevoParrafo);
+
+
+    appendChild también se puede utilizar para mover elementos
+    const parrafo = document.getElementById('parrafo');
+    const contenedor2 = document.getElementById('contenedor2');
+
+    // Movemos el párrafo al contenedor2
+    contenedor2.appendChild(parrafo);
+
+2.- Funciones Matemáticas:
+
+    Math.random(): Devuelve un número aleatorio entre 0 y 1.
+
+    Math.floor(num): Redondea un número hacia abajo.
+
+    Math.ceil(num): Redondea un número hacia arriba.
+
+    Math.max(a, b, c, ...): Devuelve el mayor de cero o más números.
+
+    Math.min(a, b, c, ...): Devuelve el menor de cero o más números.
+
+3.- Conversión de Datos:
+
+    parseInt(string): Convierte una cadena a un número entero.
+
+    parseFloat(string): Convierte una cadena a un número de punto flotante.
+
+    Number(string): Convierte una cadena a un número.
+
+4.- Temporizadores:
+
+    setTimeout(func, delay): Ejecuta una función después de un retraso especificado en milisegundos.
+
+    setInterval(func, delay): Repite la ejecución de una función en intervalos específicos.
+
+5.- Manipulación de Arreglos:
+
+    array.push(element): Añade un elemento al final del arreglo.
+
+    array.pop(): Elimina el último elemento del arreglo.
+
+    array.shift(): Elimina el primer elemento del arreglo.
+
+    array.unshift(element): Añade un elemento al inicio del arreglo.
+
+    array.splice(start, deleteCount, item1, item2, ...): Cambia el contenido de un arreglo eliminando o añadiendo elementos.
+
+    array.map(func): Crea un nuevo arreglo con los resultados de la función aplicada a cada elemento.
+
+    array.filter(func): Crea un nuevo arreglo con los elementos que cumplen con la condición de la función.
+
+    array.reduce(func, initialValue): Aplica una función a un acumulador y a cada valor del arreglo para reducirlo a un solo valor.
+
+6.- Estructuras de Control:
+
+    if, else if, else: Condicionales para la toma de decisiones.
+
+    switch: Selecciona entre múltiples bloques de código.
+
+    for: Bucle que itera un número específico de veces.
+
+    while: Bucle que itera mientras se cumpla una condición.
+
+7.- Funciones y Alcance:
+
+    Funciones Declaradas: function nombreFuncion() { ... }
+
+    Funciones Expresadas: const nombreFuncion = function() { ... }
+
+    Funciones de Flecha: const nombreFuncion = () => { ... }
+
+    Ejemplos funciones flecha:
+    // Sin parámetros
+    const saludar = () => {
+        console.log('¡Hola Mundo!');
+    };
+
+    saludar(); // Output: ¡Hola Mundo!
+
+    // Un parámetro
+    const cuadrado = x => x * x;
+
+    console.log(cuadrado(5)); // Output: 25
+
+    // Múltiples parámetros
+    const sumar = (a, b) => a + b;
+
+    console.log(sumar(3, 4)); // Output: 7
+
+
+8.- Promesas y Asincronía:
+
+    fetch(url): Realiza solicitudes HTTP.
+
+    async y await: Sintaxis para escribir código asincrónico de manera más legible.

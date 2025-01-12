@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Hola Mundo</h1>
+    <p class="parrafo">Este es un párrafo de ejemplo.</p>
+    <p class="parrafo">Este es otro párrafo de ejemplo.</p>
+    <button id="boton">Cambiar Texto</button>
+
+    <script>
+        // Cambiar el contenido del título
+        const titulo = document.getElementById('titulo');
+        titulo.textContent = 'Manipulación del DOM con JavaScript';
+
+        // Añadir un evento de clic al botón
+        const boton = document.getElementById('boton');
+        boton.addEventListener('click', function() {
+            const parrafos = document.querySelectorAll('.parrafo');
+            parrafos.forEach(parrafo => {
+                parrafo.classList.toggle('highlight');
+                parrafo.textContent = 'El texto ha sido cambiado!';
+            });
+        });
+    </script>
+</body>
+</html>
